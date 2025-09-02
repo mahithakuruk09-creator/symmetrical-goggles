@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'router.dart';
-import 'package:scredex_design_system/scredex_theme.dart';
 
-void main() => runApp(const ScredexApp());
+void main() => runApp(const ProviderScope(child: ScredexApp()));
 
 class ScredexApp extends StatelessWidget {
   const ScredexApp({super.key});
@@ -12,7 +12,7 @@ class ScredexApp extends StatelessWidget {
     return MaterialApp.router(
       title: 'Scredex',
       routerConfig: router,
-      theme: ScredexTheme.dark,
+      theme: ThemeData.dark(),
     );
   }
 }
