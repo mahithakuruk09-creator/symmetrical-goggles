@@ -1,0 +1,10 @@
+name: scredex_mobile
+version: 0.1.0
+environment: { sdk: '>=3.0.0 <4.0.0' }
+dependencies:
+  flutter: { sdk: flutter }
+  scredex_design_system: { path: ../../packages/design_system }
+dev_dependencies:
+  flutter_test: { sdk: flutter }
+flutter:
+  uses-material-design: true
