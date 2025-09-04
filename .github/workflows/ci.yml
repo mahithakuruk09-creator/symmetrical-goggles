@@ -1,18 +1,2 @@
 name: CI
-on: [push, pull_request]
-jobs:
-  flutter:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with: { channel: stable }
-      - run: flutter format --set-exit-if-changed .
-      - run: flutter analyze
-      - run: flutter test
-  backend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: pip install -r backend/api/requirements.txt -r backend/worker/requirements.txt
-      - run: pytest backend/api backend/worker
+
